@@ -1,0 +1,387 @@
+Charmap = {
+    # $00-$17 are TX_* constants (see macros/scripts/text.asm)
+
+    # Control characters (see home/text.asm)
+	"<NULL>" : 0x00,
+	"<PAGE>" : 0x49,
+	"<PKMN>" : 0x4a, # "<PK><MN>"
+	"<_CONT>" : 0x4b, # implements "<CONT>"
+	"<SCROLL>" : 0x4c,
+	"<NEXT>" : 0x4e,
+	"<LINE>" : 0x4f,
+	"@" : 0x50, # string terminator
+	"<PARA>" : 0x51,
+	"<PLAYER>" : 0x52, # wPlayerName
+	"<RIVAL>" : 0x53, # wRivalName
+	"#" : 0x54, # "POKé"
+	"<CONT>" : 0x55,
+	"<……>" : 0x56, # "……"
+	"<DONE>" : 0x57,
+	"<PROMPT>" : 0x58,
+	"<TARGET>" : 0x59,
+	"<USER>" : 0x5a,
+	"<PC>" : 0x5b, # "PC"
+	"<TM>" : 0x5c, # "TM"
+	"<TRAINER>" : 0x5d, # "TRAINER"
+	"<ROCKET>" : 0x5e, # "ROCKET"
+	"<DEXEND>" : 0x5f,
+    
+    # Actual characters (from gfx/font/font_extra.png)
+    
+	"<BOLD_A>" : 0x60, # unused
+	"<BOLD_B>" : 0x61, # unused
+	"<BOLD_C>" : 0x62, # unused
+	"<BOLD_D>" : 0x63, # unused
+	"<BOLD_E>" : 0x64, # unused
+	"<BOLD_F>" : 0x65, # unused
+	"<BOLD_G>" : 0x66, # unused
+	"<BOLD_H>" : 0x67, # unused
+	"<BOLD_I>" : 0x68, # unused
+	"<BOLD_V>" : 0x69,
+	"<BOLD_S>" : 0x6a,
+	"<BOLD_L>" : 0x6b, # unused
+	"<BOLD_M>" : 0x6c, # unused
+	"<COLON>" : 0x6d, # colon with tinier dots than ":"
+	"ぃ" : 0x6e, # hiragana small i, unused
+	"ぅ" : 0x6f, # hiragana small u, unused
+	"‘" : 0x70, # opening single quote
+	"’" : 0x71, # closing single quote
+	"“" : 0x72, # opening quote
+	"”" : 0x73, # closing quote
+	"·" : 0x74, # middle dot, unused
+	"…" : 0x75, # ellipsis
+	"ぁ" : 0x76, # hiragana small a, unused
+	"ぇ" : 0x77, # hiragana small e, unused
+	"ぉ" : 0x78, # hiragana small o, unused
+    
+	"┌" : 0x79,
+	"─" : 0x7a,
+	"┐" : 0x7b,
+	"│" : 0x7c,
+	"└" : 0x7d,
+	"┘" : 0x7e,
+	" " : 0x7f,
+    
+    # Actual characters (from gfx/font/font_battle_extra.png)
+    
+	"<LV>" : 0x6e,
+    
+	"<to>" : 0x70, # narrow "to"
+    
+	"『" : 0x72, # Japanese opening quote, unused
+	"<ID>" : 0x73,
+	"№" : 0x74,
+    
+    # Actual characters (from other graphics files)
+    
+        # needed for ShowPokedexDataInternal (see engine/menus/pokedex.asm)
+	"′" : 0x60, # gfx/pokedex/pokedex.png
+	"″" : 0x61, # gfx/pokedex/pokedex.png
+    
+        # needed for StatusScreen (see engine/pokemon/status_screen.asm)
+	"<BOLD_P>" : 0x72, # gfx/font/P.1bpp
+    
+        # needed for LoadTownMap_Fly (see engine/items/town_map.asm)
+	"▲" : 0xed, # gfx/town_map/up_arrow.1bpp
+    
+        # needed for PrintAlphabet (see engine/menus/naming_screen.asm)
+	"<ED>" : 0xf0, # gfx/font/ED.1bpp
+    
+    # Actual characters (from gfx/font/font.png)
+    
+	"A" : 0x80,
+	"B" : 0x81,
+	"C" : 0x82,
+	"D" : 0x83,
+	"E" : 0x84,
+	"F" : 0x85,
+	"G" : 0x86,
+	"H" : 0x87,
+	"I" : 0x88,
+	"J" : 0x89,
+	"K" : 0x8a,
+	"L" : 0x8b,
+	"M" : 0x8c,
+	"N" : 0x8d,
+	"O" : 0x8e,
+	"P" : 0x8f,
+	"Q" : 0x90,
+	"R" : 0x91,
+	"S" : 0x92,
+	"T" : 0x93,
+	"U" : 0x94,
+	"V" : 0x95,
+	"W" : 0x96,
+	"X" : 0x97,
+	"Y" : 0x98,
+	"Z" : 0x99,
+    
+	"(" : 0x9a,
+	")" : 0x9b,
+	":" : 0x9c,
+	";" : 0x9d,
+	"[" : 0x9e,
+	"]" : 0x9f,
+    
+	"a" : 0xa0,
+	"b" : 0xa1,
+	"c" : 0xa2,
+	"d" : 0xa3,
+	"e" : 0xa4,
+	"f" : 0xa5,
+	"g" : 0xa6,
+	"h" : 0xa7,
+	"i" : 0xa8,
+	"j" : 0xa9,
+	"k" : 0xaa,
+	"l" : 0xab,
+	"m" : 0xac,
+	"n" : 0xad,
+	"o" : 0xae,
+	"p" : 0xaf,
+	"q" : 0xb0,
+	"r" : 0xb1,
+	"s" : 0xb2,
+	"t" : 0xb3,
+	"u" : 0xb4,
+	"v" : 0xb5,
+	"w" : 0xb6,
+	"x" : 0xb7,
+	"y" : 0xb8,
+	"z" : 0xb9,
+    
+	"é" : 0xba,
+	"'d" : 0xbb,
+	"'l" : 0xbc,
+	"'s" : 0xbd,
+	"'t" : 0xbe,
+	"'v" : 0xbf,
+    
+	"'" : 0xe0,
+	"<PK>" : 0xe1,
+	"<MN>" : 0xe2,
+	"-" : 0xe3,
+    
+	"'r" : 0xe4,
+	"'m" : 0xe5,
+    
+	"?" : 0xe6,
+	"!" : 0xe7,
+	"." : 0xe8,
+    
+	"ァ" : 0xe9, # katakana small a, unused
+	"ゥ" : 0xea, # katakana small u, unused
+	"ェ" : 0xeb, # katakana small e, unused
+    
+	"▷" : 0xec,
+	"▶" : 0xed,
+	"▼" : 0xee,
+	"♂" : 0xef,
+	"¥" : 0xf0,
+	"×" : 0xf1,
+	"<DOT>" : 0xf2, # decimal point# same as "." in English
+	"/" : 0xf3,
+	"," : 0xf4,
+	"♀" : 0xf5,
+    
+	"0" : 0xf6,
+	"1" : 0xf7,
+	"2" : 0xf8,
+	"3" : 0xf9,
+	"4" : 0xfa,
+	"5" : 0xfb,
+	"6" : 0xfc,
+	"7" : 0xfd,
+	"8" : 0xfe,
+	"9" : 0xff,
+    
+    
+    # Japanese kana, for those bits of text that were not translated to English
+    
+	"ガ" : 0x05,
+	"ギ" : 0x06,
+	"グ" : 0x07,
+	"ゲ" : 0x08,
+	"ゴ" : 0x09,
+	"ザ" : 0x0a,
+	"ジ" : 0x0b,
+	"ズ" : 0x0c,
+	"ゼ" : 0x0d,
+	"ゾ" : 0x0e,
+	"ダ" : 0x0f,
+	"ヂ" : 0x10,
+	"ヅ" : 0x11,
+	"デ" : 0x12,
+	"ド" : 0x13,
+    
+	"バ" : 0x19,
+	"ビ" : 0x1a,
+	"ブ" : 0x1b,
+	"ボ" : 0x1c,
+    
+	"が" : 0x26,
+	"ぎ" : 0x27,
+	"ぐ" : 0x28,
+	"げ" : 0x29,
+	"ご" : 0x2a,
+	"ざ" : 0x2b,
+	"じ" : 0x2c,
+	"ず" : 0x2d,
+	"ぜ" : 0x2e,
+	"ぞ" : 0x2f,
+	"だ" : 0x30,
+	"ぢ" : 0x31,
+	"づ" : 0x32,
+	"で" : 0x33,
+	"ど" : 0x34,
+    
+	"ば" : 0x3a,
+	"び" : 0x3b,
+	"ぶ" : 0x3c,
+	"べ" : 0x3d,
+	"ぼ" : 0x3e,
+    
+	"パ" : 0x40,
+	"ピ" : 0x41,
+	"プ" : 0x42,
+	"ポ" : 0x43,
+	"ぱ" : 0x44,
+	"ぴ" : 0x45,
+	"ぷ" : 0x46,
+	"ぺ" : 0x47,
+	"ぽ" : 0x48,
+    
+	"「" : 0x70,
+	"」" : 0x71,
+	"』" : 0x73,
+	"⋯" : 0x75,
+    
+	"　" : 0x7f,
+    
+	"ア" : 0x80,
+	"イ" : 0x81,
+	"ウ" : 0x82,
+	"エ" : 0x83,
+	"オ" : 0x84,
+	"カ" : 0x85,
+	"キ" : 0x86,
+	"ク" : 0x87,
+	"ケ" : 0x88,
+	"コ" : 0x89,
+	"サ" : 0x8a,
+	"シ" : 0x8b,
+	"ス" : 0x8c,
+	"セ" : 0x8d,
+	"ソ" : 0x8e,
+	"タ" : 0x8f,
+	"チ" : 0x90,
+	"ツ" : 0x91,
+	"テ" : 0x92,
+	"ト" : 0x93,
+	"ナ" : 0x94,
+	"ニ" : 0x95,
+	"ヌ" : 0x96,
+	"ネ" : 0x97,
+	"ノ" : 0x98,
+	"ハ" : 0x99,
+	"ヒ" : 0x9a,
+	"フ" : 0x9b,
+	"ホ" : 0x9c,
+	"マ" : 0x9d,
+	"ミ" : 0x9e,
+	"ム" : 0x9f,
+	"メ" : 0xa0,
+	"モ" : 0xa1,
+	"ヤ" : 0xa2,
+	"ユ" : 0xa3,
+	"ヨ" : 0xa4,
+	"ラ" : 0xa5,
+	"ル" : 0xa6,
+	"レ" : 0xa7,
+	"ロ" : 0xa8,
+	"ワ" : 0xa9,
+	"ヲ" : 0xaa,
+	"ン" : 0xab,
+	"ッ" : 0xac,
+	"ャ" : 0xad,
+	"ュ" : 0xae,
+	"ョ" : 0xaf,
+	"ィ" : 0xb0,
+    
+	"あ" : 0xb1,
+	"い" : 0xb2,
+	"う" : 0xb3,
+	"え" : 0xb4,
+	"お" : 0xb5,
+	"か" : 0xb6,
+	"き" : 0xb7,
+	"く" : 0xb8,
+	"け" : 0xb9,
+	"こ" : 0xba,
+	"さ" : 0xbb,
+	"し" : 0xbc,
+	"す" : 0xbd,
+	"せ" : 0xbe,
+	"そ" : 0xbf,
+	"た" : 0xc0,
+	"ち" : 0xc1,
+	"つ" : 0xc2,
+	"て" : 0xc3,
+	"と" : 0xc4,
+	"な" : 0xc5,
+	"に" : 0xc6,
+	"ぬ" : 0xc7,
+	"ね" : 0xc8,
+	"の" : 0xc9,
+	"は" : 0xca,
+	"ひ" : 0xcb,
+	"ふ" : 0xcc,
+	"へ" : 0xcd,
+	"ほ" : 0xce,
+	"ま" : 0xcf,
+	"み" : 0xd0,
+	"む" : 0xd1,
+	"め" : 0xd2,
+	"も" : 0xd3,
+	"や" : 0xd4,
+	"ゆ" : 0xd5,
+	"よ" : 0xd6,
+	"ら" : 0xd7,
+	"り" : 0xd8,
+	"る" : 0xd9,
+	"れ" : 0xda,
+	"ろ" : 0xdb,
+	"わ" : 0xdc,
+	"を" : 0xdd,
+	"ん" : 0xde,
+	"っ" : 0xdf,
+	"ゃ" : 0xe0,
+	"ゅ" : 0xe1,
+	"ょ" : 0xe2,
+    
+	"ー" : 0xe3,
+	"ﾟ" : 0xe4,
+	"ﾞ" : 0xe5,
+    
+	"？" : 0xe6,
+	"！" : 0xe7,
+	"。" : 0xe8,
+    
+	"円" : 0xf0,
+    
+	"．" : 0xf2,
+	"／" : 0xf3,
+    
+	"ォ" : 0xf4,
+    
+	"０" : 0xf6,
+	"１" : 0xf7,
+	"２" : 0xf8,
+	"３" : 0xf9,
+	"４" : 0xfa,
+	"５" : 0xfb,
+	"６" : 0xfc,
+	"７" : 0xfd,
+	"８" : 0xfe,
+	"９" : 0xff
+}
