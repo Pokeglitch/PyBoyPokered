@@ -1,6 +1,7 @@
 from enum import IntEnum
 
 class Items(IntEnum):
+    Empty = 0x00
     MasterBall = 0x01
     UltraBall = 0x02
     GreatBall = 0x03

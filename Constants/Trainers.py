@@ -1,7 +1,7 @@
 from enum import IntEnum
 
 class Trainers(IntEnum):
-    Nobody = 0x00
+    Empty = 0x00
     Youngster = 0x01
     BugCatcher = 0x02
     Lass = 0x03

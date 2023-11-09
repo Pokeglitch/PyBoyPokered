@@ -1,6 +1,7 @@
 from enum import IntEnum
 
 class Pokemon(IntEnum):
+    Empty = 0x00
     Rhydon = 0x01
     Kangaskhan = 0x02
     NidoranM = 0x03

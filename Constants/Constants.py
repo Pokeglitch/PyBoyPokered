@@ -4,6 +4,9 @@ from .Trainers import Trainers
 from .Moves import Moves
 from .Types import Types
 from .Maps import Maps
+from .Sprites import Sprites
+from .Tilesets import Tilesets
+from .Statuses import Statuses
 
 Charmap = {
     # $00-$17 are TX_* constants (see macros/scripts/text.asm)

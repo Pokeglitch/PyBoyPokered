@@ -110,3 +110,23 @@ class PyBoyPokered(PyBoyGameWrapper):
 
 
 pyboy.plugin_manager.PluginManager.add_gamewrapper(PyBoyPokered)
+
+'''
+Reward Breakpoints:
+DisplayEffectiveness.SuperEffective
+GainExperience
+ItemUseBall.caughtMon
+(extra for ItemUseBall.showPokedex)
+EvolveMon.setCarry
+
+Punish Breakpoints:
+DisplayEffectiveness.NotVeryEffective
+TryRunningFromBattle.trainerBattle
+
+# Wall Collision:
+OverworldLoopLessDelay.collisionOccurredOnLandNoWarp (if z set)
+OverworldLoopLessDelay.collisionOccurredOnLandWarp
+CollisionCheckOnWater.setCarry
+CheckWarpsCollision.noWarpsFound
+
+'''

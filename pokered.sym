@@ -39,6 +39,8 @@
 00:055b OverworldLoopLessDelay.notRightToLeft
 00:0564 OverworldLoopLessDelay.holdIntermediateDirectionLoop
 00:057e OverworldLoopLessDelay.noDirectionChange
+00:059a OverworldLoopLessDelay.collisionOccurredOnLandNoWarp
+00:05a5 OverworldLoopLessDelay.collisionOccurredOnLandWarp
 00:05a8 OverworldLoopLessDelay.surfing
 00:05ae OverworldLoopLessDelay.noCollision
 00:05b5 OverworldLoopLessDelay.moveAhead
@@ -62,6 +64,7 @@
 00:070d CheckWarpsCollision.loop
 00:0726 CheckWarpsCollision.retry1
 00:0727 CheckWarpsCollision.retry2
+00:072c CheckWarpsCollision.noWarpsFound
 00:072f CheckWarpsNoCollisionRetry1
 00:0730 CheckWarpsNoCollisionRetry2
 00:0735 WarpFound1
@@ -2941,6 +2944,8 @@
 03:5805 ItemUseBall.skipShakeCalculations
 03:5871 ItemUseBall.notTransformed
 03:587e ItemUseBall.skip6
+03:58b4 ItemUseBall.caughtMon
+03:58e0 ItemUseBall.showPokedex
 03:58f4 ItemUseBall.skipShowingPokedexData
 03:5907 ItemUseBall.sendToBox
 03:591a ItemUseBall.printTransferredToPCText
@@ -5847,6 +5852,8 @@
 0b:7980 BeedrillPicBack
 0b:79e8 FossilKabutopsPic
 0b:7b7b DisplayEffectiveness
+0b:7b83 DisplayEffectiveness.SuperEffective
+0b:7b88 DisplayEffectiveness.NotVeryEffective
 0b:7b8b DisplayEffectiveness.done
 0b:7b8e SuperEffectiveText
 0b:7b93 NotVeryEffectiveText
@@ -14165,6 +14172,7 @@
 1e:7de9 EvolveMon
 1e:7e63 EvolveMon.animLoop
 1e:7e81 EvolveMon.done
+1e:7ea7 EvolveMon.setCarry
 1e:7ea9 EvolveMon.evolutionCancelled
 1e:7eb4 EvolutionSetWholeScreenPalette
 1e:7eb9 Evolution_LoadPic
