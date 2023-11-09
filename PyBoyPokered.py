@@ -2,18 +2,13 @@
 # License: See LICENSE.md file
 # GitHub: https://github.com/Baekalfen/PyBoy
 #
-__pdoc__ = {
-    "GameWrapperPokered.cartridge_title": False,
-    "GameWrapperPokered.post_tick": False,
-}
-
 import logging
 
 import numpy as np
 
 import pyboy
 from pyboy.utils import WindowEvent
-from pyboy.plugins.base_plugin import PyBoyGameWrapper, PyBoyDebugPlugin
+from pyboy.plugins.base_plugin import PyBoyGameWrapper
 
 logger = logging.getLogger(__name__)
 
@@ -27,10 +22,6 @@ from Breakpoints import Breakpoints
 from Charmap import Charmap
 import Constants.Constants as Constants
 
-# TODO - Helper class for getting address, checking on RAM read/write, etc
-class DebugPokered(PyBoyDebugPlugin):
-    pass
-
 class PyBoyPokered(PyBoyGameWrapper):
     """
     This class wraps Pokemon Red/Blue, and provides basic access for AIs.
@@ -43,9 +34,8 @@ class PyBoyPokered(PyBoyGameWrapper):
         self.shape = (20, 18)
         super().__init__(*args, game_area_section=(0, 0) + self.shape, game_area_wrap_around=True, **kwargs)
         self.sprite_offset = 0x1000
-        self.Constants = Constants
         self.Breakpoints = Breakpoints(self.mb)
-        self.Charmap = Charmap(self.Constants.Charmap)
+        self.Charmap = Charmap(Constants.Charmap)
 
     @classmethod
     def enabled(cls, pyboy, pyboy_argv):

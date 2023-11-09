@@ -19,6 +19,7 @@ class Charmap:
 
         return "".join([self.ByteToChar[byte][0] for byte in bytes])
     
+    # TODO - need to handle multi-character 'chars'
     def toBytes(self, chars):
         if type(chars) != list:
             chars = [chars]

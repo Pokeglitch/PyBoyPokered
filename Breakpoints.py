@@ -7,13 +7,13 @@ class Breakpoints:
         self.Breakpoints = {}
 
     def add(self, name, callback):
-        if not self.Breakpoints:
-            self.mb.addOnCycle(self.onCycle)
-
         addr = self.Symbols.get(name)
 
         if not addr:
             return False
+        
+        if not self.Breakpoints:
+            self.mb.addOnCycle(self.onCycle)
         
         if addr not in self.Breakpoints:
             self.Breakpoints[addr] = []
